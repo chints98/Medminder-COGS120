@@ -5,7 +5,44 @@
   Read more here: http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element
 -- >
 <html lang="en-us">
-  <head></head>
+  <head>
+    <head>
+      <!--
+        Specify character encoding
+      -->
+      <meta charset="UTF-8">
+      <!--
+        Internet Explorer supports the use of a document compatibility <meta> tag to specify what version of IE the page should be rendered as.
+        It's most useful to instruct IE to use the latest supported mode with edge mode.
+      -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!--
+        Specify initial viewport dimesions for mobile devices.
+        initial-scale specifies what the initial ratio between device-width and device-height is at render time.
+        maximum-scale defines the maximum zoom value. It must be greater or equal to minimum-scale, or the user-agent ignores it.
+        minimum scale has a default value of 1.
+      -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+      <meta name="author" content="Chaitanya Prashant">
+
+      <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+      <title>
+        Medminder Initial web-app
+      </title>
+      <!--
+        Standardize default styles across browsers.
+      -->
+      <link rel="stylesheet" href="normalize.css">
+      <!--
+        CSS and JavaScript includes.
+        There is usually no need to specify a type when including CSS and JavaScript files, since text/css and text/javascript are their respective defaults in HTML5.
+      -->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      <script src="js/script.js"></script>
+
+    </head>
+  </head>
   <body>
     <h1>Cabinet page</h1>
     <a href="index.html">Back to Home</a>

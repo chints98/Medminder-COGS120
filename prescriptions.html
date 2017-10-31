@@ -24,47 +24,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="author" content="Chaitanya Prashant">
 
-    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
     <title>
-      Medminder Initial web-app
+      Medminder prescription page
     </title>
     <!--
       Standardize default styles across browsers.
     -->
-    <link rel="stylesheet" href="normalize.css">
     <!--
       CSS and JavaScript includes.
       There is usually no need to specify a type when including CSS and JavaScript files, since text/css and text/javascript are their respective defaults in HTML5.
     -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/prescription.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="js/script.js"></script> -->å
+
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
   </head>
 
   <body>
     <div class="container">
     <div class="page-header">
-
-      <div class="header-container">
-    <h1>Prescriptions</h1></div>
-
+    <div class="header-container">
+  <h1 class="center-aligned">Prescriptions</h1></div>
   </div>
 
 
-
-    <div class="list-container">
-      <div class="list-component">A list thingy here with a secondary list thing as well</div>
-      <div class="list-component">Another list thingy here</div>
-      <div class="list-component">3rd list thing</div>
+  <div class="col s12 m7">
+  <a class="card horizontal waves-effect", href="#">
+  <div class="card-stacked">
+    <div class="card-content">
+      <p class="list-item" style="color: #292929;">Paracetemol</p>
     </div>
-
-
-
-    <div class="floating-action-button"><p>Button for adding prescription should go here, this is a link!</p></div>
-
-    <div class="tab-bar"><p>This is going to stick to the bottom like a footer, also links to prescription and cabinet.</p></div>
+      <div class="list-date"><p>25th October to 30th October</p></div>
   </div>
+</a>
+</div>
+
+
+  <div class="col s12 m7">
+  <a class="card horizontal waves-effect", href="#">
+  <div class="card-stacked">
+    <div class="card-content">
+      <p class="list-item" style="color: #292929;">Aspirin</p>
+    </div>
+    <div class="list-date"><p>25th October to 30th October</p></div>
+  </div>
+</a>
+</div>
+
+
+<div class="col s12 m7">
+<a class="card horizontal waves-effect", href="#">
+<div class="card-stacked">
+  <div class="card-content">
+    <p class="list-item" style="color: #292929;">Ibuprofen</p>
+  </div>
+    <div class="list-date"><p>25th October to 30th October</p></div>
+</div>
+</a>
+</div>
+
+    <!--<div class="floating-action-button" style="margin-left:10px;"><a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a></div>-->
+
+
+
+  <div class="row">
+    <div class="col s12">
+        <ul class="tabs">
+            <li class="tab col s4"><a class="black-text" target="_self" href="cabinet.html">Cabinet</a></li>
+            <li class="tab col s4"><a class="black-text" target="_self" href="index.html">Home</a></li>
+            <li class="tab col m4"><a class="black-text active" target="_self" href="prescription.html">Prescription</a></li>
+            <div class="indicator black" style="z-index:1"></div>
+        </ul>
+    </div>
+</div>
+
+
 
 
 

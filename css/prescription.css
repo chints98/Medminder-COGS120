@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+.list-item {
+  text-decoration: none;
+  color: #292929;
+  font-size: 18px;
+}
+
+.list-date {
+  color: #939393;
+  padding: 3px;
+  margin-left: 17px;
+}
