@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+.list-item {
+  text-decoration: none;
+  color: #292929;
+  font-size: 18px;
+}
+
+.list-tablet {
+  color: #939393;
+  padding: 3px;
+  margin-left: 17px;
+}
+
+#tablet1, #tablet2, #tablet3 {
+  color: #939393;
+  padding: 3px;
+  margin-left: 17px;
+}
+
+.navigation-bar {
+  text-align: center;
+  background-color: lightblue;
+}
+
+.search {
+  margin-right: 0;
+}
