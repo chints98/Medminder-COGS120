@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="author" content="Brittany Butler">
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>
+      Medminder Initial web-app
+    </title>
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Compiled and minified (not even) CSS -->
+    <link rel="stylesheet" href="materialize/css/materialize.css">
+
+    <!-- Compiled and minified (not) JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="materialize/js/materialize.js"></script>
+
+    <!-- FormatGoogleCalendar Javascript file -->
+    <script src="/js/format-google-calendar.js"></script>
+
+    <script>
+      formatGoogleCalendar.init({
+        calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/ua4avhp96cfkg6d1c8e1b591o0@group.calendar.google.com/events?key=AIzaSyAkF99I71D94IyK9VVrDq2TwC1uVq93lSM',
+        past: false,
+        upcoming: true,
+        sameDayTimes: true,
+        dayNames: true,
+        pastTopN: -1,
+        upcomingTopN: 3,
+        recurringEvents: true, 
+        itemsTagName: 'li',
+        upcomingSelector: '#events-upcoming',
+        pastSelector: '#events-past',
+        upcomingHeading: '<h2>Upcoming events</h2>',
+        pastHeading: '<h2>Past events</h2>',
+        format: ['*date*', ': ', '*summary*', ' — ', '*description*', ' in ', '*location*'],
+        timeMin: '2016-06-03T10:00:00-07:00',
+        timeMax: '2020-06-03T10:00:00-07:00'
+});
+      </script>
+
+    
+ </head>
+    
+    <body>
+        <!-- Navigation bar page header -->
+        <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper" id="top-of-home"> <a href="home.html" class="brand-logo center">Home</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+        <!-- Move the sidenav outside of .navbar-fixed -->
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+        <div class="container"> 
+
+        <!-- test calendar disp again? -->  
+            <ul id="events-upcoming">
+            </ul>
+            <ul id="events-past">
+            </ul>
+    
+        <!--Three example prescriptions
+        <div class="col s12 m7">
+          <a class="card horizontal waves-effect" , href="view_prescription.html">
+            <div class="card-stacked">
+              <div class="card-content">
+                <p class="list-item" style="color: #292929;">Paracetemol</p>
+              </div>
+              <div class="list-tablet">
+                <p id="tablet1">1 tablet</p>
+              </div>
+            </div>
+          </a>
+        </div>
+    
+    
+        <div class="col s12 m7">
+          <a class="card horizontal waves-effect" , href="view_prescription.html">
+            <div class="card-stacked">
+              <div class="card-content">
+                <p class="list-item" style="color: #292929;">Aspirin</p>
+              </div>
+              <div class="list-tablet">
+                <p id="tablet2">2 tablets</p>
+              </div>
+            </div>
+          </a>
+        </div>
+    
+    
+        <div class="col s12 m7">
+          <a class="card horizontal waves-effect" , href="view_prescription.html">
+            <div class="card-stacked">
+              <div class="card-content">
+                <p class="list-item" style="color: #292929;">Ibuprofen</p>
+              </div>
+              <div class="list-tablet">
+                <p id="tablet3">1 tablet</p>
+              </div>
+            </div>
+          </a>
+        </div> -->
+
+        <div class="container">
+            <div class="h_iframe">
+                <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ua4avhp96cfkg6d1c8e1b591o0%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="800" frameborder="0" scrolling="no"></iframe>  
+            </div>
+        </div> 
+
+        <!-- Add button -->
+        <div class="floating-action-button" style="display: inline-block; text-align: right; width: 100%">
+            <a class="btn-floating btn-large waves-effect waves-light red" href="add_prescription.html">
+                <i class="material-icons">add</i>
+            </a>
+        </div>
+    
+        <!-- Footer -->
+        <div class="row">
+          <div class="col s12">
+            <ul class="tabs">
+              <li class="tab col s6">
+                <a class="black-text active" target="_self" href="home.html">Home</a>
+              </li>
+              <li class="tab col s6">
+                <a class="black-text" target="_self" href="prescriptions.html">Prescription</a>
+              </li>
+              <div class="indicator black" style="z-index:1"></div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>

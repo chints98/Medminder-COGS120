@@ -1,0 +1,17 @@
+body {
+    margin: 21px;
+    background: rgb(255, 255, 255);
+}
+form {
+    width: 300px;
+    background: #ee8d9a;
+    border-radius: 3px;
+    margin: 48px auto;
+    padding: 1em 1.5em 3.5em;
+}
+.float-right {
+    float: right;
+}
+.btn {
+    margin-right: 5px;
+}
