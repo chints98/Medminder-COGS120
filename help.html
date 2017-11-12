@@ -4,10 +4,89 @@
   lang makes life easier for screenreaders and speech synthesis tools.
   Read more here: http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element
 -->
-<html lang="en-us">
-  <head></head>
-  <body>
-    <h1>Help page</h1>
-    <a href="index.html">Back to Home</a>
-  </body>
-  </html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact form</title>
+  <link rel="stylesheet" href="materialize/css/materialize.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="materialize/js/materialize.js"></script>
+</head>
+
+<body>
+  <!-- Navigation bar page header -->
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper" id="top-of-home">
+        <a href="home.html" class="brand-logo center">Help</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="settings.html">Settings</a>
+          </li>
+          <li>
+            <a href="help.html">Help</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- Move the sidenav outside of .navbar-fixed -->
+  <ul class="side-nav" id="mobile-demo">
+    <li>
+      <a href="settings.html">Settings</a>
+    </li>
+    <li>
+      <a href="help.html">Help</a>
+    </li>
+  </ul>
+  <div class="container">
+
+    <section class="container">
+      <div class="row">
+        <h3 class="center-align pink-text">Need help? Send us a message!</h3>
+        <article class="col s6 offset-s3">
+          <form method="POST" action="formulario-contacto.php">
+            <div class="input-field">
+              <i class="material-icons prefix">perm_identity</i>
+              <label for="name">Name</label>
+              <input type="text" name="name" required>
+            </div>
+
+            <div class="input-field">
+              <i class="material-icons prefix">email</i>
+              <label for="email">Email</label>
+              <input type="email" name="email" required>
+            </div>
+
+            <div class="input-field">
+              <i class="material-icons prefix">mode_edit</i>
+              <label for="Message">What do you need help with?</label>
+              <textarea name="Message" id="" rows="10" class="materialize-textarea" required></textarea>
+            </div>
+
+            <p class="center-align">
+              <center>
+                <div class='row'>
+                  <a class='col s6 offset-s6 btn btn-large waves-effect pink' href="disp-confirm.html">Send</a>
+                </div>
+              </center>
+              <!--<button class="waves-effect waves-light btn" type="submit"><i class="material-icons right">send</i>send</button>-->
+            </p>
+
+          </form>
+
+        </article>
+      </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+</body>
+
+</html>

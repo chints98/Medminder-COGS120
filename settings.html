@@ -5,9 +5,79 @@
   Read more here: http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element
 -->
 <html lang="en-us">
-  <head></head>
+  <head>
+      <link rel="stylesheet" href="css/settings.css">
+      <script src="js/simp-settings.js"></script>
+
+      <!--test materialize compat. -->
+      <script src="materialize/js/materialize.js"></script>
+      <link rel="stylesheet" href="materialize/css/materialize.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  </head>
   <body>
-    <h1>Settings page</h1>
-    <a href="index.html">Back to Home</a>
+    <!--<h1>Settings page</h1> -->
+
+    <!--test add materialize header -->
+    <!-- Navigation bar page header -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper" id="top-of-home"> <a href="home.html" class="brand-logo center">Settings</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+        <!-- Move the sidenav outside of .navbar-fixed -->
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+        
+    <!--form components-->
+
+    <div class="row">
+    <form class="col s6 offset-s3">
+
+    <form id="localStorage" action="#">
+        <div class="input-field col s6 white-text">
+          <input value="John Smith" id="name" type="text" class="validate">
+          <label for="name" class="active">Full Name:</label>
+          <input class="input-xlarge stored" type="text" name="name" id="name" placeholder="" />
+        </div>
+
+        <div class="input-field col s6 white-text">
+          <input value="jsmith@gmail.com" id="email" type="text" class="validate">
+          <label for="email" class="active">Email:</label>
+          <input class="input-xlarge stored" type="text" name="email" id="email" placeholder="" />
+        </div>
+
+        <div class="input-field col s6 white-text">
+          <input value="*************" id="password" type="text" class="validate">
+          <label for="password" class="active">Password</label>
+          <input class="input-xlarge stored" type="text" name="password" id="password" placeholder="" />
+        </div>
+
+
+        <form action="#">
+        <label for="select">Would you like to recieve notifications?</label>
+            <p>
+              <input name="group1" type="radio" id="test1" />
+              <label for="test1">Yes</label>
+            </p>
+            <p>
+              <input name="group1" type="radio" id="test2" />
+              <label for="test2">No</label>
+            </p>
+          </form>
+        <input id="add" type="submit" value="Add" />
+        <button id="clear">Clear All</button>
+      </form>  
+      </div>
+    </form>
   </body>
   </html>

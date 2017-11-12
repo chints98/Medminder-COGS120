@@ -1,0 +1,20 @@
+/*html,body{font: 14px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;margin:0;background-color:#37BC9B;height: 100%;} */
+
+.dateTimeWrapper{margin-left:-13px;background-color:#333;color:white!important;padding:15px}
+
+.currentMonth{display:inline;color:#37BC9B!important;text-shadow : 0 0 0 #37BC9B; font-size:14px; }
+.currentYear{display:inline; padding-left:5px; color:#37BC9B!important;text-shadow : 0 0 0 #37BC9B; font-size:14px;}
+.currentDay{color:#37BC9B!important;text-shadow : 0 0 0 #37BC9B; font-size:22px;}
+.currentTime{font-size:52px;padding-bottom:3px;color:whitesmoke; padding-left:10px;line-height: 0;}
+.meaning{margin-left:5px}
+
+.dateHolder{margin: 0;padding: 0;list-style-type: none;width:100%;padding-top:10px ;}
+.dateHolder li { display: inline; float: left; width:0;text-align: center;}
+.dateHolder div {padding:px;}
+.dateHolder .date{color:whitesmoke;font-size:18px; }
+.dateHolder .day{color:whitesmoke;padding-top:8px;}
+.dateCurrent{color:#37BC9B!important;text-shadow : 0 0 0 #37BC9B;}
+
+/*.center{ height: 100%; margin-top:10%; display: -webkit-box; display: -moz-box; display: box;-webkit-box-align: center;-moz-box-align: center;flex-align: center;-webkit-box-pack: center;-moz-box-pack: center;flex-pack: center;font-size:2.5em;color:white}*/
+
+

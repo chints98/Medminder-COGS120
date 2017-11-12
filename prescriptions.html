@@ -1,26 +1,8 @@
 <!DOCTYPE html>
-<!--
-  Root HTML element with the lang attribute.
-  lang makes life easier for screenreaders and speech synthesis tools.
-  Read more here: http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element
--- >
 <html lang="en-us">
   <head>
-    <!--
-      Specify character encoding
-    -->
 <meta charset="UTF-8">
-<!--
-      Internet Explorer supports the use of a document compatibility <meta> tag to specify what version of IE the page should be rendered as.
-      It's most useful to instruct IE to use the latest supported mode with edge mode.
-    -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!--
-      Specify initial viewport dimesions for mobile devices.
-      initial-scale specifies what the initial ratio between device-width and device-height is at render time.
-      maximum-scale defines the maximum zoom value. It must be greater or equal to minimum-scale, or the user-agent ignores it.
-      minimum scale has a default value of 1.
-    -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="author" content="Chaitanya Prashant">
 
@@ -28,38 +10,75 @@
 <title>
   Medminder prescription page
 </title>
-<!--
-      Standardize default styles across browsers.
-    -->
-<!--
-      CSS and JavaScript includes.
-      There is usually no need to specify a type when including CSS and JavaScript files, since text/css and text/javascript are their respective defaults in HTML5.
-    -->
+
 <link rel="stylesheet" href="css/prescription.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <script src="js/script.js"></script> -->
+<!-- Compiled and minified (not even) CSS -->
+<link rel="stylesheet" href="materialize/css/materialize.css">
 
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
+<!-- Compiled and minified (not) JavaScript -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="materialize/js/materialize.js"></script>
 
 </head>
 
 <body>
-  <div class="container">
+  <!-- Navigation bar page header -->
+  <div class="navbar-fixed">
+      <nav>
+          <div class="nav-wrapper" id="top-of-home"> <a href="home.html" class="brand-logo center">Prescriptions</a>
+              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                  <li><a href="settings.html">Settings</a></li>
+                  <li><a href="help.html">Help</a></li>
+              </ul>
+          </div>
+      </nav>
+      </div>
+      <!-- Move the sidenav outside of .navbar-fixed -->
+      <ul class="side-nav" id="mobile-demo">
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="help.html">Help</a></li>
+      </ul>
+      
+    <ul id="events-upcoming">
+    </ul>
+    <ul id="events-past">
+    </ul>
+    <script src="js/format-google-calendar.js"></script>
+    <script>
+      formatGoogleCalendar.init({
+        calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/ua4avhp96cfkg6d1c8e1b591o0@group.calendar.google.com/events?key=AIzaSyAkF99I71D94IyK9VVrDq2TwC1uVq93lSM',
+        past: true,
+        upcoming: true,
+        sameDayTimes: true,
+        pastTopN: 20,
+        upcomingTopN: 20,
+        recurringEvents: false,
+        itemsTagName: 'li',
+        upcomingSelector: '#events-upcoming',
+        pastSelector: '#events-past',
+        upcomingHeading: '<h2>Current Prescriptions</h2>',
+        pastHeading: '<h2>History of Prescriptions</h2>',
+        format: ['*date*', ': ', '*summary*', ' &mdash; ', '*description*', ' in ', '*location*'],
+        timeMin: '2016-06-03T10:00:00-07:00',
+        timeMax: '2020-06-03T10:00:00-07:00'
+      });
+    </script>
+  
+
+      <div class="container">
+  
+  <!--<div class="container">
     <div class="page-header">
       <div class="header-container">
         <h1 class="center-aligned">Prescriptions</h1>
       </div>
-    </div>
+    </div>-->
 
 
+    <!--
     <div class="col s12 m7">
       <a class="card horizontal waves-effect" , href="#">
         <div class="card-stacked">
@@ -99,7 +118,7 @@
           </div>
         </div>
       </a>
-    </div>
+    </div> -->
 
     <!--<div class="floating-action-button" style="margin-left:10px;"><a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a></div>-->
 
@@ -108,13 +127,10 @@
     <div class="row">
       <div class="col s12">
         <ul class="tabs">
-          <li class="tab col s4">
-            <a class="black-text" target="_self" href="cabinet.html">Cabinet</a>
+          <li class="tab col s6">
+            <a class="black-text" target="_self" href="home.html">Home</a>
           </li>
-          <li class="tab col s4">
-            <a class="black-text" target="_self" href="index.html">Home</a>
-          </li>
-          <li class="tab col m4">
+          <li class="tab col s6">
             <a class="black-text active" target="_self" href="prescription.html">Prescription</a>
           </li>
           <div class="indicator black" style="z-index:1"></div>
