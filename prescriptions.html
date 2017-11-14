@@ -27,12 +27,13 @@
   <!-- Navigation bar page header -->
   <div class="navbar-fixed">
       <nav>
-          <div class="nav-wrapper" id="top-of-home"> <a href="home.html" class="brand-logo center">Prescriptions</a>
+          <div class="nav-wrapper" id="top-of-home"> <a href="prescriptions.html" class="brand-logo center">Prescriptions</a>
               <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
                   <li><a href="settings.html">Settings</a></li>
                   <li><a href="help.html">Help</a></li>
               </ul>
+              <a href="home.html"><i class="large material-icons" style="padding-left: 10px;">arrow_back</i></a>
           </div>
       </nav>
       </div>
@@ -41,10 +42,12 @@
           <li><a href="settings.html">Settings</a></li>
           <li><a href="help.html">Help</a></li>
       </ul>
-      
-    <ul id="events-upcoming">
+
+
+    <ul id="events-upcoming" style="margin-left: 20px; margin-right: 20px; padding-bottom: 10px;">
     </ul>
-    <ul id="events-past">
+
+    <ul id="events-past" style="margin-left: 20px; margin-right: 20px;">
     </ul>
     <script src="js/format-google-calendar.js"></script>
     <script>
@@ -54,22 +57,23 @@
         upcoming: true,
         sameDayTimes: true,
         pastTopN: 20,
-        upcomingTopN: 20,
+        upcomingTopN: 25,
         recurringEvents: false,
         itemsTagName: 'li',
         upcomingSelector: '#events-upcoming',
         pastSelector: '#events-past',
-        upcomingHeading: '<h2>Current Prescriptions</h2>',
-        pastHeading: '<h2>History of Prescriptions</h2>',
-        format: ['*date*', ': ', '*summary*', ' &mdash; ', '*description*', ' in ', '*location*'],
+        upcomingHeading: '<h2 style="margin-left: 20px;">Current Prescriptions</h2>',
+        pastHeading: '<h2 style="margin-left: 20px;">Recent Prescriptions</h2>',
+        format: ['*summary*', ': ', '*date*', ' &mdash; ', '*description*', ' in ', '*location*'],
         timeMin: '2016-06-03T10:00:00-07:00',
         timeMax: '2020-06-03T10:00:00-07:00'
       });
     </script>
-  
+
+
 
       <div class="container">
-  
+
   <!--<div class="container">
     <div class="page-header">
       <div class="header-container">
@@ -78,8 +82,8 @@
     </div>-->
 
 
-    <!--
-    <div class="col s12 m7">
+
+    <!--<div class="col s12 m7">
       <a class="card horizontal waves-effect" , href="#">
         <div class="card-stacked">
           <div class="card-content">
@@ -124,7 +128,7 @@
 
 
 
-    <div class="row">
+    <div class="row" style="height: 85vh;">
       <div class="col s12">
         <ul class="tabs">
           <li class="tab col s6">

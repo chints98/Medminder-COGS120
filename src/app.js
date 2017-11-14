@@ -93,7 +93,7 @@ window.formatGoogleCalendar = (() => {
         if (settings.timeMin) {
             finalURL = finalURL.concat('&timeMin=' + settings.timeMin);
         };
-        
+
         if (settings.timeMax) {
             finalURL = finalURL.concat('&timeMax=' + settings.timeMax);
         };
@@ -101,7 +101,7 @@ window.formatGoogleCalendar = (() => {
         //Get JSON, parse it, transform into list items and append it to past or upcoming events list
         var request = new XMLHttpRequest();
         request.open('GET', finalURL, true);
-        
+
         request.onload = () => {
             if (request.status >= 200 && request.status < 400) {
                 var data = JSON.parse(request.responseText);
@@ -110,11 +110,11 @@ window.formatGoogleCalendar = (() => {
                 console.error(err);
             }
         };
-        
+
         request.onerror = () => {
             console.error(err);
         };
-        
+
         request.send();
     };
 
@@ -134,12 +134,12 @@ window.formatGoogleCalendar = (() => {
     const isAllDay = (dateStart, dateEnd) => {
         var dateEndTemp = subtractOneDay(dateEnd);
         var isAll = true;
-        
+
         for (var i = 0; i < 3; i++) {
             if (dateStart[i] !== dateEndTemp[i]) {
                 isAll = false;
             }
-        } 
+        }
 
         return isAll;
     };
@@ -151,7 +151,7 @@ window.formatGoogleCalendar = (() => {
             if (dateStart[i] !== dateEnd[i]) {
                 isSame = false;
             }
-        } 
+        }
 
         return isSame;
     }
@@ -246,15 +246,15 @@ window.formatGoogleCalendar = (() => {
     };
 
     const getDayNameFormatted = dateFormatted => getDayName(getDateFormatted(dateFormatted).getDay()) + ' ';
-    
+
     const getDateFormatted = dateInfo => new Date(dateInfo[2], dateInfo[1], dateInfo[0], dateInfo[3], dateInfo[4] + 0, 0);
 
     //Compare dates
-    const comp = (a, b) => new Date(a.start.dateTime || a.start.date).getTime() - new Date(b.start.dateTime || b.start.date).getTime();  
+    const comp = (a, b) => new Date(a.start.dateTime || a.start.date).getTime() - new Date(b.start.dateTime || b.start.date).getTime();
 
     //Add one day
     const addOneDay = (dateInfo) => calculateDate(dateInfo, 86400000);
-    
+
     //Subtract one day
     const subtractOneDay = (dateInfo) => calculateDate(dateInfo, -86400000);
 
@@ -398,7 +398,7 @@ window.formatGoogleCalendar = (() => {
         return formattedTime;
     };
 
-    return { 
+    return {
         init: function (settingsOverride) {
             var settings = {
                 calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/milan.kacurak@gmail.com/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY',
