@@ -12,7 +12,7 @@
     </title>
     <link rel="stylesheet" href="css/home.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
     <!-- Compiled and minified (not even) CSS -->
     <link rel="stylesheet" href="materialize/css/materialize.css">
 
@@ -32,7 +32,7 @@
         dayNames: true,
         pastTopN: -1,
         upcomingTopN: 3,
-        recurringEvents: true, 
+        recurringEvents: true,
         itemsTagName: 'li',
         upcomingSelector: '#events-upcoming',
         pastSelector: '#events-past',
@@ -44,9 +44,9 @@
 });
       </script>
 
-    
+
  </head>
-    
+
     <body>
         <!-- Navigation bar page header -->
         <div class="navbar-fixed">
@@ -56,6 +56,7 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="settings.html">Settings</a></li>
                     <li><a href="help.html">Help</a></li>
+                    <li><a href="index.html">Logout</a></li>
                 </ul>
             </div>
         </nav>
@@ -64,15 +65,16 @@
         <ul class="side-nav" id="mobile-demo">
             <li><a href="settings.html">Settings</a></li>
             <li><a href="help.html">Help</a></li>
+            <li><a href="index.html">Logout</a></li>
         </ul>
-        <div class="container"> 
+        <div class="container">
 
-        <!-- test calendar disp again? -->  
+        <!-- test calendar disp again? -->
             <ul id="events-upcoming">
             </ul>
             <ul id="events-past">
             </ul>
-    
+
         <!--Three example prescriptions
         <div class="col s12 m7">
           <a class="card horizontal waves-effect" , href="view_prescription.html">
@@ -86,8 +88,8 @@
             </div>
           </a>
         </div>
-    
-    
+
+
         <div class="col s12 m7">
           <a class="card horizontal waves-effect" , href="view_prescription.html">
             <div class="card-stacked">
@@ -100,8 +102,8 @@
             </div>
           </a>
         </div>
-    
-    
+
+
         <div class="col s12 m7">
           <a class="card horizontal waves-effect" , href="view_prescription.html">
             <div class="card-stacked">
@@ -117,19 +119,24 @@
 
         <div class="container">
             <div class="h_iframe">
-                <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ua4avhp96cfkg6d1c8e1b591o0%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="800" frameborder="0" scrolling="no"></iframe>  
+                <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ua4avhp96cfkg6d1c8e1b591o0%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="800" frameborder="0" scrolling="no"></iframe>
+
             </div>
-        </div> 
+            <div style="float:left; margin-top: 10px;">
+            <a class="btn red" onclick="Materialize.toast('Take Paracetemol today!', 2000)">Reminder</a></div>
+            <div style="float: right;">
+            <a class="btn btn-large waves-effect waves-light red" href="add_prescription.html">
+                <!--<i class="material-icons">add</i>-->
+                Add a New Prescription
+            </a> </div>
+        </div>
 
         <!-- Add button -->
-        <div class="floating-action-button" style="display: inline-block; text-align: right; width: 100%">
-            <a class="btn-floating btn-large waves-effect waves-light red" href="add_prescription.html">
-                <i class="material-icons">add</i>
-            </a>
+        <div class="button" style="display: inline-block; text-align: right; width: 100%">
         </div>
-    
+
         <!-- Footer -->
-        <div class="row">
+         <div class="row" style="padding-top: 250px;">
           <div class="col s12">
             <ul class="tabs">
               <li class="tab col s6">
